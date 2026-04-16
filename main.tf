@@ -12,8 +12,8 @@ provider "azurerm" {
 
 terraform {
   backend "azurerm" {
-    resource_group_name  = "example-resources" #change here
-    storage_account_name = "tfstorage123dominik" #change here
+    resource_group_name  = "rg-user1" #change here
+    storage_account_name = "stacuser1" #change here
     container_name       = "tfstate"
     key                  = "terraform.tfstate"
   }
