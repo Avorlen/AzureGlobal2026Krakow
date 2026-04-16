@@ -56,3 +56,16 @@ module "service_plan" {
     created_by  = "terraform"
   }
 }
+
+module "app_service" {
+  source = "git::https://github.com/pchylak/global_azure_2026_ccoe.git?ref=app_service/v1.0.0"
+  app_service_name = "appse1"
+  app_service_plan_id = "module.service_plan.app_service.id"
+  app_settings = {}
+  identity_client_id = "9250ac11-86ff-4a38-bce3-383a4161453c"
+  identity_id = "07b0f606-7924-4626-b6d7-e48719aaea20"
+  resource_group = {
+    location = "uksouth"
+    name = "rg-user1"
+  }
+}
