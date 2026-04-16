@@ -12,8 +12,8 @@ provider "azurerm" {
 
 terraform {
   backend "azurerm" {
-    resource_group_name  = "rg-user1" #change here
-    storage_account_name = "stacuser1" #change here
+    resource_group_name  = "rg-user1"
+    storage_account_name = "stacuser1"
     container_name       = "tfstate"
     key                  = "terraform.tfstate"
   }
@@ -29,4 +29,5 @@ module "keyvault" {
     name = "rg-user1"
   }
 }
+
 
