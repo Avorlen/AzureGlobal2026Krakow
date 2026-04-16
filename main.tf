@@ -20,7 +20,7 @@ terraform {
 }
 
 module "keyvault" {
-  source = "git::https://github.com/Avorlen/AzureGlobal2026Krakow.git?ref=keyvault/v1.0.0"
+  source = "git::https://github.com/pchylak/global_azure_2026_ccoe.git?ref=keyvault/v1.0.0"
   keyvault_name = "kevo1"
   network_acls = {
   }
@@ -29,5 +29,4 @@ module "keyvault" {
     name = "rg-user1"
   }
 }
-
 
