@@ -24,7 +24,10 @@ module "keyvault" {
   keyvault_name = "kevo1"
   network_acls = {
   }
-  resource_group = "rg-user1"
+  resource_group = {
+    location = "uksouth"
+    name = "rg-user1"
+  }"
 }
 
 
