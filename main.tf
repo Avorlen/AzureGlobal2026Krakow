@@ -78,3 +78,13 @@ module "app_service" {
     name = "rg-user1"
   }
 }
+
+module "application_insights" {
+  source = "git::https://github.com/pchylak/global_azure_2026_ccoe.git?ref=application_insights/v1.0.0"
+  application_insights_name = "appinne1"
+  log_analytics_name = "loanna1"
+  resource_group = {
+    location = "uksouth"
+    name = "rg-user1"
+  }
+}
