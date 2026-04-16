@@ -88,3 +88,13 @@ module "application_insights" {
     name = "rg-user1"
   }
 }
+
+module "mssql_database" {
+  source = "git::https://github.com/pchylak/global_azure_2026_ccoe.git?ref=mssql_database/v1.0.0"
+  database_name = "mydb1"
+  mssql_server_id = module.mssql_server.mssql_server_id
+  resource_group = {
+    location = "uksouth"
+    name = "rg-user1"
+  }
+}
