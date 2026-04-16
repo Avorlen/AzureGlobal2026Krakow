@@ -27,7 +27,7 @@ module "keyvault" {
   resource_group = {
     location = "uksouth"
     name = "rg-user1"
-  }"
+  }
 }
 
 
