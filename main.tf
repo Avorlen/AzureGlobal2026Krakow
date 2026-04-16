@@ -71,7 +71,7 @@ module "app_service" {
   app_service_name = "appse1"
   app_service_plan_id = module.service_plan.app_service_plan.id
   app_settings = {}
-  identity_client_id = module.managed_identity.identity_client_id
+  identity_client_id = module.managed_identity.client_id
   identity_id = module.managed_identity.identity_id
   resource_group = {
     location = "uksouth"
