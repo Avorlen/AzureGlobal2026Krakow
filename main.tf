@@ -23,6 +23,7 @@ module "keyvault" {
   source = "git::https://github.com/pchylak/global_azure_2026_ccoe.git?ref=keyvault/v1.0.0"
   keyvault_name = "kevo1"
   network_acls = {
+    bypass = "AzureServices"
   }
   resource_group = {
     location = "uksouth"
