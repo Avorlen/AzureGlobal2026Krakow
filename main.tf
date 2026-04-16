@@ -30,3 +30,14 @@ module "keyvault" {
     name = "rg-user1"
   }
 }
+
+module "mssql_server" {
+  source = "git::https://github.com/pchylak/global_azure_2026_ccoe.git?ref=mssql_server/v1.0.0"
+  resource_group = {
+    location = "uksouth"
+    name = "rg-user1"
+  }
+  sql_server_admin = "sqladmin"
+  sql_server_version = "2019"
+  sql_server_name = "sqlse1"
+}
