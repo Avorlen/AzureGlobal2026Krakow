@@ -29,5 +29,3 @@ module "keyvault" {
     name = "rg-user1"
   }
 }
-
-
