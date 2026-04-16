@@ -18,3 +18,13 @@ terraform {
     key                  = "terraform.tfstate"
   }
 }
+
+module "keyvault" {
+  source = "git::https://github.com/Avorlen/AzureGlobal2026Krakow.git?ref=keyvault/v1.0.0"
+  keyvault_name = "kevo1"
+  network_acls = {
+  }
+  resource_group = "rg-user1"
+}
+
+
