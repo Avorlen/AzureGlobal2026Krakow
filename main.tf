@@ -41,3 +41,18 @@ module "mssql_server" {
   sql_server_version = "12.0"
   sql_server_name = "sqlse1"
 }
+
+module "service_plan" {
+  source = "git::https://github.com/pchylak/global_azure_2026_ccoe.git?ref=service_plan/v2.0.0"
+  app_service_plan_name = "sepl1"
+  resource_group = {
+    location = "uksouth"
+    name = "rg-user1"
+  }
+  sku_name = "B3"
+  tags = {
+    environment = "workshops"
+    owner       = "user1"
+    created_by  = "terraform"
+  }
+}
