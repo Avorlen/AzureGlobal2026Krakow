@@ -38,6 +38,6 @@ module "mssql_server" {
     name = "rg-user1"
   }
   sql_server_admin = "sqladmin"
-  sql_server_version = "2019"
+  sql_server_version = "12.0"
   sql_server_name = "sqlse1"
 }
