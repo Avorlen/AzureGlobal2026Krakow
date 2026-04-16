@@ -66,15 +66,4 @@ module "managed_identity" {
   }
 }
 
-module "app_service" {
-  source = "git::https://github.com/pchylak/global_azure_2026_ccoe.git?ref=app_service/v1.0.0"
-  app_service_name = "appse1"
-  app_service_plan_id = module.service_plan.app_service_plan.id
-  app_settings = {}
-  identity_client_id = module.managed_identity.client_id
-  identity_id = module.managed_identity.identity_id
-  resource_group = {
-    location = "uksouth"
-    name = "rg-user1"
-  }
-}
+
